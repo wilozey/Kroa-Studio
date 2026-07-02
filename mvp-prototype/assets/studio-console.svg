@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 640" role="img" aria-labelledby="title desc">
+  <title id="title">KROA studio console</title>
+  <desc id="desc">A stylized music dashboard with waveform, cover art, and release controls.</desc>
+  <rect width="1400" height="640" fill="#18322b"/>
+  <rect x="72" y="76" width="560" height="390" rx="18" fill="#f2faf6"/>
+  <rect x="112" y="116" width="170" height="170" rx="12" fill="#2862a8"/>
+  <circle cx="168" cy="168" r="38" fill="#f4c95d"/>
+  <circle cx="231" cy="226" r="28" fill="#b84c67"/>
+  <path d="M332 165 C354 104 386 232 414 166 S471 92 506 168 S565 244 592 166" fill="none" stroke="#1f8a70" stroke-width="18" stroke-linecap="round"/>
+  <rect x="112" y="326" width="440" height="22" rx="11" fill="#c9dad2"/>
+  <rect x="112" y="372" width="340" height="22" rx="11" fill="#c9dad2"/>
+  <rect x="704" y="116" width="520" height="72" rx="12" fill="#dceee6" opacity=".92"/>
+  <rect x="704" y="224" width="360" height="72" rx="12" fill="#f2faf6" opacity=".84"/>
+  <rect x="704" y="332" width="460" height="72" rx="12" fill="#f2faf6" opacity=".78"/>
+  <rect x="704" y="440" width="280" height="72" rx="12" fill="#dceee6" opacity=".86"/>
+  <path d="M86 548 C170 492 242 594 322 538 S480 480 574 538 S718 604 814 542 S996 472 1096 536 S1254 592 1360 524" fill="none" stroke="#7bf0bd" stroke-width="16" stroke-linecap="round" opacity=".7"/>
+</svg>

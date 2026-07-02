@@ -1,0 +1,565 @@
+PAGES 15
+
+
+--- PAGE 1 ---
+
+KROA  Studio:  Minimum  Viable  Product  
+( MVP )
+Detailed Speciﬁcation, Architecture & Build Roadm ap
+Project: K ROA Studio — AI-Powered M usic Distribution & Artist Ecosystem
+Docum ent Type: M VP Speciﬁcation Docum ent
+Version: 1.0
+Prepared by: M anus AI
+Date: J uly 2026
+Table of Contents
+1.Executive Sum m ary
+2.Problem  Statem ent & M arket Opportunity
+3.M VP Philosophy & Scope Rationale
+4.Target U ser Persona
+5.M VP M odule Speciﬁcations
+6.U ser Flows
+7.Technical Architecture
+8.Database Schem a Overview
+9.M onetisation Strategy
+10.G o-To-M arket Strategy
+11.Build Roadm ap (16 W eeks)
+12.Success M etrics (K PIs)
+13.Risk Register
+14.References
+1. Executive Sum m ary
+K ROA Studio is envisioned as the global AI operating system  for m usic creators — a single 
+platform  that replaces the need for a record label, publisher, distributor, m arketing agency, 
+
+
+--- PAGE 2 ---
+
+and business m anager. The full vision is am bitious, com prehensive, and transform ative. 
+However, the path to building a world-class platform  begins with a disciplined, focused, 
+and rapidly executable M inim um  Viable Product (M VP).
+This docum ent deﬁnes the scope, features, technical architecture, m onetisation m odel, 
+and build roadm ap for the K ROA Studio M VP. The M VP is not a stripped-down version of the 
+ﬁnal product — it is a strategic ﬁrst product that solves the m ost urgent and universal 
+problem s for independent artists: getting m usic distributed reliably, understanding 
+royalty earnings transparently, and using AI to com pete with artists who have label 
+support.
+The m usic distribution services m arket was valued at approxim ately $9.02 billion in 2024 
+and is projected to grow signiﬁcantly through 2035. 1  The independent artist segm ent 
+alone is expected to reach $1.2 billion by 2034. 2  This is a large, underserved m arket with 
+strong dem and for a better, sm arter distribution platform .
+The K ROA Studio M VP will be a web-based platform , built in 16 weeks, and designed to 
+scale directly into the broader ecosystem  described in the full product vision.
+2. Problem  Statem ent & M arket Opportunity
+Independent artists today face a fragm ented and frustrating set of challenges. They m ust 
+use one tool to distribute their m usic, a separate tool to track royalties, another to m anage 
+publishing, and yet another to m arket their releases. Existing distributors like DistroK id, 
+TuneCore, and CD Baby solve the distribution problem  but oﬀer little intelligence, creativity 
+support, or business guidance.
+The core problem s K ROA Studio's M VP will solve are as follows.
+Problem  1: Distribution is com m oditised but not intelligent. Artists can upload m usic to 
+DSPs through any distributor, but the process is error-prone, and rejections due to 
+m etadata issues are com m on. There is no AI layer that catches problem s before they 
+happen.
+Problem  2: Royalty reporting is opaque and delayed. M ost platform s report earnings 
+weeks or m onths after the fact, with confusing breakdowns that artists cannot act on. 
+Artists need real-tim e, actionable ﬁnancial data.
+Problem  3: M arketing is the biggest barrier to success. Independent artists with no label 
+support struggle to write com pelling press releases, pitch playlists, or create professional 
+prom otional m aterials. AI can dem ocratise access to these capabilities.
+Problem  4: Collaboration paym ents are m anual and trust-dependent. W hen a producer 
+and artist collaborate, splitting royalties requires m anual bank transfers and trust. There is 
+no autom ated, transparent system  em bedded in m ost distribution platform s.
+
+
+--- PAGE 3 ---
+
+3. M VP Philosophy & Scope Rationale
+The M VP is governed by a single principle: every feature included m ust directly solve one 
+of the four core problem s identiﬁed above. Features that are valuable but do not address 
+these problem s — such as sync licensing, m erchandise, fan clubs, or blockchain certiﬁcates 
+— are explicitly excluded from  the M VP and scheduled for Phase 2 and Phase 3 
+developm ent.
+This approach ensures the developm ent team  can ship a high-quality, stable product within 
+16 weeks, that early users receive genuine value from  day one, and that the platform  can 
+generate revenue to fund subsequent developm ent phases.
+The M VP includes three core m odules: K ROA Distribution, K ROA Analytics & Finance, and 
+K ROA AI (Starter). These three m odules form  a coherent, self-contained product that is 
+m eaningfully better than any single com petitor in the m arket today.
+4. Target U ser Persona
+The M VP is designed for a single prim ary persona, with a secondary persona supported at a 
+basic level.
+Prim ary Persona — The Independent Artist
+Attribute Description
+Age 18‒35
+Career Stage Em erging to m id-level (0‒50,000 m onthly 
+Spotify listeners)
+Technical Com fort M oderate; com fortable with web apps but 
+not developers
+Prim ary G oal G et m usic on stream ing platform s and earn 
+royalties
+Secondary G oal G row audience and look professional without 
+label support
+Current Pain Points Confusing royalty reports, release rejections, 
+expensive m arketing
+W illingness to Pay $10‒$25/year for a reliable, all-in-one tool
+
+
+--- PAGE 4 ---
+
+Secondary Persona — The Sm all Independent Label
+A m anager or label owner handling 2‒5 artists who needs a single dashboard to m anage 
+m ultiple releases and distribute royalty paym ents to m ultiple artists without m anual bank 
+transfers.
+5. M VP M odule Speciﬁcations
+5.1 M odule 1: K ROA Distribution
+This m odule is the foundation of the platform  and the prim ary reason users will sign up. It 
+m ust be reliable, fast, and noticeably sm arter than com petitors.
+5.1.1 Supported U pload Form ats
+The M VP will support the following content types at launch: Singles and EPs. Full Album s 
+will be introduced in Phase 2. Accepted audio form ats are W AV (24-bit, 44.1kHz m inim um ), 
+FLAC, and M P3 (320kbps m inim um ). Cover art m ust be a m inim um  of 3000× 3000px J PEG  
+or PNG .
+5.1.2 DSP Distribution Partners
+At M VP launch, K ROA Studio will distribute to the following platform s: Spotify, Apple M usic, 
+Am azon M usic, YouTube M usic, TikTok, Instagram /Facebook, Deezer, and Tidal. Rather than 
+building direct API integrations with each DSP individually — a process that requires 
+m onths of certiﬁcation — the M VP will leverage a B2B white-label distribution aggregator 
+(such as FU G A, Sonosuite, or DistroScale) to handle the actual delivery pipeline. This allows 
+the K ROA team  to focus engineering resources on the user-facing product and AI features.
+5.1.3 AI-Assisted M etadata Validation
+This is a key diﬀerentiator. Before a release is subm itted to DSPs, the K ROA AI layer will scan 
+the m etadata and ﬂag com m on issues that cause rejection. The validation checks include 
+the following:
+Validation Check Description
+Title Form atting
+Detects ALL CAPS titles, trailing spaces, or 
+special characters disallowed by Apple M usic 
+and Spotify
+Explicit Flag Scans lyrics (if provided) or prom pts user to 
+conﬁrm  explicit content status
+ISRC Validity Validates ISRC code form at if provided; oﬀers 
+to generate one if not
+
+
+--- PAGE 5 ---
+
+5.1.4 Release Scheduling and Territory Selection
+U sers can set a release date a m inim um  of 7 days in advance (to allow DSP processing 
+tim e). They can choose to release globally or select speciﬁc territories. A "Pre-Save" link will 
+be autom atically generated for Spotify and Apple M usic upon scheduling, which the artist 
+can share on social m edia.
+5.2 M odule 2: K ROA Analytics & Finance
+This m odule is the prim ary retention driver. Once artists have released m usic through 
+K ROA, the quality and clarity of the analytics dashboard determ ines whether they stay on 
+the platform .
+5.2.1 Stream ing Analytics Dashboard
+The dashboard will display the following data, aggregated from  DSP reporting APIs:
+Royalty estim ates are calculated using industry-standard per-stream  rates. As a reference 
+benchm ark, Spotify pays approxim ately $0.00437 per stream , Apple M usic pays 
+Artwork Resolution Conﬁrm s artwork m eets the 3000× 3000px 
+m inim um  requirem ent
+Audio Quality Analyses bit depth and sam ple rate; warns if 
+below recom m ended thresholds
+Duplicate Detection Checks if the sam e track title and ISRC 
+already exist in the user's catalogue
+M etric Refresh Frequency
+Total Stream s (All Platform s) Daily
+Stream s by Platform Daily
+Stream s by Country W eekly
+Estim ated Royalties (Current M onth) Daily
+Conﬁrm ed Royalties (Previous M onths) M onthly
+Top Perform ing Tracks Daily
+Listener Dem ographics (Age/G ender) W eekly
+Playlist Adds W eekly
+
+
+--- PAGE 6 ---
+
+approxim ately $0.0056‒$0.0078, and Tidal pays approxim ately $0.013 per stream . 3  The 
+dashboard will display these as estim ates clearly labelled as such, with conﬁrm ed ﬁgures 
+updated m onthly when DSP statem ents are received.
+5.2.2 Royalty Payout System
+Artists can withdraw their conﬁrm ed royalty balance at any tim e once they reach a 
+m inim um  threshold of $25 (lower than the industry standard of $50, which is a com petitive 
+advantage). Payouts are processed via Stripe Connect (bank transfer) or PayPal. The 
+platform  will support m ulti-currency payouts, autom atically converting earnings to the 
+user's local currency at the prevailing exchange rate.
+5.2.3 Autom ated Royalty Split Paym ents
+This feature directly addresses one of the m ost painful m anual processes in the 
+independent m usic industry. At the track level, an artist can assign a royalty split to 
+collaborators by entering their em ail address and a percentage. The collaborator receives 
+an em ail invitation to create a K ROA Studio account (or log in if they already have one) and 
+claim  their share. All split paym ents are handled autom atically by the platform  on each 
+payout cycle, with a transparent ledger visible to all parties.
+5.2.4 Financial Sum m ary and Tax Reporting
+The platform  will generate a m onthly earnings sum m ary and an annual incom e statem ent 
+in PDF form at, which artists can use for tax ﬁling purposes. Currency conversion history will 
+be logged for accurate reporting.
+5.3 M odule 3: K ROA AI (Starter)
+The AI m odule is the prim ary diﬀerentiator that positions K ROA Studio above all existing 
+com petitors. At M VP stage, it is intentionally scoped to two high-im pact, high-visibility 
+features.
+5.3.1 AI Release Assistant
+A conversational AI assistant, powered by the OpenAI G PT-4o API, that helps artists with the 
+written and strategic work surrounding a release. The assistant is pre-loaded with context 
+about the artist's proﬁle (genre, artist nam e, release title) and can generate the following 
+outputs on request:
+• Spotify Editorial Pitch: A structured, professional pitch em ail form atted to Spotify's 
+editorial subm ission guidelines, personalised to the track's genre and m ood.
+• Press Release: A 300‒500 word press release announcing the release, suitable for m usic 
+blogs and online publications.
+
+
+--- PAGE 7 ---
+
+• Social M edia Captions: Platform -speciﬁc captions for Instagram , TikTok, X (Twitter), 
+and Facebook, including relevant hashtag suggestions.
+• Artist Bio (Short & Long Form ): A professional artist biography based on inform ation 
+the user provides.
+Each output is editable within the platform  before the artist copies or downloads it.
+5.3.2 AI Cover Art G enerator
+Integrated with the DALL-E 3 API (or a com parable im age generation m odel), this feature 
+allows artists to generate professional cover art without needing a graphic designer. The 
+user inputs a short prom pt (e.g., "dark, cinem atic, Afrobeats, night cityscape, warm  tones") 
+and the system  generates four variations. The user can select one, download it at 
+3000× 3000px, and use it directly in their release upload ﬂow. Pro and Label tier users 
+receive a higher m onthly generation allowance.
+6. U ser Flows
+6.1 New U ser Onboarding
+The onboarding ﬂow is designed to reach the artist's "ﬁrst value m om ent" — a scheduled 
+release — within 10 m inutes of signing up.
+Step 1 — Account Creation: U ser signs up via Em ail/Password or OAuth (G oogle or Apple). 
+Em ail veriﬁcation is required.
+Step 2 — Artist Proﬁle Setup: U ser enters their Artist Nam e, prim ary G enre (selected from  
+a dropdown), Country, and optionally links their Spotify for Artists, Instagram , and TikTok 
+proﬁles.
+Step 3 — Plan Selection: U ser is presented with the three pricing tiers (Basic, Pro, Label) 
+with a clear com parison table. The Basic (free) tier is pre-selected, with a prom pt to 
+upgrade.
+Step 4 — First Release Prom pt: U pon com pleting the proﬁle, the user is im m ediately 
+guided to upload their ﬁrst release via a prom inent call-to-action button.
+6.2 Release U pload Flow
+1.U ser clicks "New Release" and selects "Single" or "EP."
+2.U ser uploads the audio ﬁle. The system  displays a waveform  preview and runs an 
+autom ated audio quality check.
+3.U ser uploads cover art or clicks "G enerate with AI" to open the AI Cover Art G enerator.
+
+
+--- PAGE 8 ---
+
+4.U ser ﬁlls in the m etadata form  (Track Title, Prim ary Artist, Featured Artists, Songwriters, 
+Producers, G enre, Subgenre, Explicit ﬂag, Language).
+5.The AI M etadata Validator runs and displays a checklist. Any ﬂagged issues are shown in 
+am ber (warning) or red (error) with a plain-English explanation and a suggested ﬁx.
+6.U ser selects the release date and target DSPs.
+7.U ser reviews the split paym ents section, adding any collaborators if applicable.
+8.U ser clicks "Subm it Release." The system  conﬁrm s receipt and displays the estim ated 
+delivery tim eline (typically 3‒5 business days to all DSPs).
+9.U ser is prom pted to use the AI Release Assistant to generate prom otional content for 
+the release.
+6.3 Royalty W ithdrawal Flow
+1.U ser navigates to the "Finance" tab and sees their conﬁrm ed balance.
+2.U ser clicks "W ithdraw Funds."
+3.If this is the ﬁrst withdrawal, the user is prom pted to connect their Stripe or PayPal 
+account.
+4.U ser conﬁrm s the withdrawal am ount and currency.
+5.The system  processes the paym ent. Split paym ent am ounts are sim ultaneously sent to 
+all collaborators with active accounts.
+6.A transaction receipt is em ailed to all parties.
+7. Technical Architecture
+7.1 System  Architecture Overview
+The K ROA Studio M VP will be built as a m odern, cloud-native web application using a 
+decoupled frontend and backend architecture. This approach ensures that each layer can 
+be scaled independently as user load grows.
+Plain Text
+[User Browser / Web App]
+        |
+        v
+[Next.js Frontend — Vercel CDN]
+        |
+        v
+
+
+--- PAGE 9 ---
+
+[NestJS REST/GraphQL API — AWS ECS]
+        |
+    ┌───┴───────────────────────────────┐
+    |                                   |
+[PostgreSQL DB — Supabase]    [AWS S3 — Audio/Image Storage]
+    |
+    v
+[External Integrations]
+  - B2B Distribution Aggregator (FUGA/Sonosuite)
+  - OpenAI API (GPT-4o, DALL-E 3)
+  - Stripe Connect (Payments)
+  - DSP Reporting APIs (Spotify for Artists, Apple Music Connect)
+7.2 Recom m ended Tech Stack
+Layer Technology J ustiﬁcation
+Frontend Next.js 14 (React), Tailwind CSS
+Server-side rendering for SEO, 
+fast page loads, and a rich 
+com ponent ecosystem .
+Backend API NestJ S (Node.js/TypeScript)
+M odular, scalable architecture 
+well-suited to com plex 
+business logic and m ulti-
+service integrations. 4
+Database PostgreSQL via Supabase
+Relational structure is ideal for 
+ﬁnancial ledgers, royalty splits, 
+and user relationships. 
+Supabase adds real-tim e 
+capabilities and a m anaged 
+hosting layer.
+File Storage AW S S3 (or Cloudﬂare R2)
+Industry standard for secure, 
+durable, and scalable storage 
+of audio and im age ﬁles.
+Authentication Supabase Auth (J W T)
+Handles OAuth (G oogle, Apple) 
+and em ail/password ﬂows out 
+of the box.
+Paym ents Stripe Connect
+The only enterprise-grade 
+solution for m anaging m ulti-
+party payouts (royalty splits) at 
+scale.
+AI (Text) OpenAI G PT-4o API Best-in-class language m odel 
+for generating high-quality 
+
+
+--- PAGE 10 ---
+
+7.3 Security Considerations
+Security is non-negotiable for a platform  handling ﬁnancial data and intellectual property. 
+The M VP m ust im plem ent the following from  day one: HTTPS everywhere, J W T-based 
+authentication with short expiry and refresh token rotation, role-based access control 
+(RBAC) for the Label tier's m ulti-artist m anagem ent, AES-256 encryption for all stored audio 
+ﬁles, and PCI-DSS com pliance delegated entirely to Stripe (no raw card data ever touches 
+K ROA servers). Two-factor authentication (2FA) via authenticator app will be available as an 
+optional feature at launch and m andatory for Label tier accounts.
+8. Database Schem a Overview
+The following tables represent the core data m odel for the M VP.
+m arketing copy and release 
+pitches.
+AI (Im age) DALL-E 3 API
+Reliable, high-quality im age 
+generation accessible via the 
+sam e OpenAI API key.
+Em ail Resend or SendG rid
+Transactional em ail for 
+invitations, receipts, and 
+notiﬁcations.
+Hosting Vercel (Frontend), AW S ECS 
+(Backend)
+Vercel provides zero-conﬁg 
+frontend deploym ent; AW S ECS 
+provides ﬂexible, scalable 
+container hosting for the 
+backend.
+M onitoring Sentry (Errors), Datadog 
+(Perform ance)
+Essential for m aintaining 
+platform  stability post-launch.
+Table Key Fields Purpose
+users id, em ail, nam e, role, plan_tier, 
+created_at Stores all user accounts
+artists id, user_id, artist_nam e, genre, 
+country, spotify_uri Artist proﬁle linked to a user
+releases id, artist_id, title, type, status, 
+release_date, upc A single, EP, or album  release
+
+
+--- PAGE 11 ---
+
+9. M onetisation Strategy
+The M VP will adopt a Freem ium  + Annual Subscription m odel. Industry data indicates that 
+SaaS freem ium  conversion rates average between 2‒5%, with well-optim ised products 
+achieving up to 8% on free trial m odels. 5  The K ROA Studio m odel is designed to convert 
+users by dem onstrating clear ﬁnancial value: an artist who earns m ore than $19.99/year in 
+royalties has an im m ediate ﬁnancial incentive to upgrade from  the com m ission-based free 
+tier to the Pro tier.
+9.1 Pricing Tiers
+tracks id, release_id, title, isrc, 
+audio_url, duration, explicit Individual track within a release
+splits id, track_id, user_id, 
+percentage, status
+Royalty split assignm ents per 
+track
+royalties
+id, track_id, platform , period, 
+stream s, estim ated_am ount, 
+conﬁrm ed_am ount
+Royalty data per track per 
+platform
+payouts id, user_id, am ount, currency, 
+status, processed_at Payout transactions
+ai_generations id, user_id, type, prom pt, 
+output_url, created_at Log of all AI-generated content
+subscriptions
+id, user_id, plan, 
+stripe_subscription_id, status, 
+renews_at
+Subscription m anagem ent
+Feature KROA Basic (Free) KROA Pro 
+($19.99/year)
+KROA Label 
+($59.99/year)
+Releases per year 1 U nlim ited U nlim ited (up to 5 
+artists)
+Royalty com m ission 15% 0% 0%
+DSP Distribution All m ajor All m ajor All m ajor
+Analytics Dashboard Basic Full Full + M ulti-artist
+Royalty Splits — Yes Yes
+
+
+--- PAGE 12 ---
+
+9.2 Revenue Projections (Year 1)
+The following projections are conservative estim ates based on a target of 5,000 registered 
+users by end of Year 1, with a 5% free-to-paid conversion rate.
+This is a m odest but realistic foundation. Year 2 targets 25,000 users with im proved 
+conversion through product-led growth, pushing annual recurring revenue (ARR) toward 
+$75,000‒$100,000 before Phase 2 features are introduced.
+10. G o-To-M arket Strategy
+10.1 Pre-Launch (W eeks 1‒12)
+During the build phase, K ROA Studio should begin building an audience and a waiting list. 
+The strategy involves the following actions.
+A content m arketing cam paign should be launched on TikTok, Instagram  Reels, and 
+YouTube Shorts, targeting independent artists with educational content about royalties, 
+AI Release Assistant 3 uses/m onth U nlim ited U nlim ited
+AI Cover Art G enerator 2 generations 20/m onth 50/m onth
+Priority Support — — Yes
+M inim um  Payout 
+Threshold $25 $25 $25
+M etric Value
+Target registered users (Year 1) 5,000
+Estim ated Pro conversions (5%) 250
+Estim ated Label conversions (1%) 50
+Annual revenue from  Pro subscriptions $4,997.50
+Annual revenue from  Label subscriptions $2,999.50
+Estim ated com m ission revenue (Basic tier) ~$1,500
+Estim ated Total Year 1 Revenue ~$9,500
+
+
+--- PAGE 13 ---
+
+m etadata tips, and m usic business advice. This positions K ROA as a knowledgeable 
+authority before the product even launches.
+A waitlist landing page should be live within the ﬁrst two weeks, collecting em ail 
+addresses in exchange for early access and a free 3-m onth Pro trial. A target of 1,000 waitlist 
+sign-ups before launch is achievable with consistent content output.
+Com m unity seeding in existing artist com m unities (Reddit's r/W eAreTheM usicM akers, 
+Facebook G roups for independent artists, Discord servers) should begin with genuine, 
+value-adding participation — not spam .
+10.2 Launch (W eeks 13‒16)
+The launch strategy centres on a Product Hunt launch, which is the standard go-to-m arket 
+channel for SaaS products targeting creative professionals. A well-executed Product Hunt 
+launch can generate 500‒2,000 sign-ups in a single day.
+Sim ultaneously, direct outreach to 50‒100 independent m usic blogs, YouTube channels, 
+and podcast hosts who cover the m usic business should be conducted, oﬀering exclusive 
+early access and aﬃliate com m ission arrangem ents.
+10.3 Post-Launch G rowth
+The prim ary growth engine post-launch is product-led growth (PLG ): the royalty split 
+invitation system  is inherently viral. Every tim e an artist invites a collaborator to claim  their 
+split, that collaborator is introduced to K ROA Studio organically. This creates a built-in 
+referral loop without requiring a form al referral program m e.
+11. Build Roadm ap (16 W eeks)
+Phase W eeks Deliverables
+Phase A: Foundation 1‒4
+U I/U X wirefram es and design 
+system ; Cloud infrastructure 
+setup (AW S, Supabase); U ser 
+authentication and proﬁle 
+system ; W aitlist landing page 
+live
+Phase B: Distribution Engine 5‒8
+Audio upload and S3 storage 
+pipeline; B2B aggregator API 
+integration; M etadata intake 
+form  and AI validation logic; 
+Release scheduling and 
+territory selection
+
+
+--- PAGE 14 ---
+
+12. Success M etrics (K PIs)
+The following K ey Perform ance Indicators will be tracked from  the ﬁrst week of public 
+launch to m easure the M VP's success and inform  Phase 2 decisions.
+13. Risk Register
+Phase C: Analytics & Finance 9‒12
+Analytics dashboard (stream s, 
+royalties); Stripe Connect 
+integration for subscriptions 
+and payouts; Royalty split 
+system  and collaborator 
+invitation ﬂow; Financial 
+sum m ary and PDF export
+Phase D: AI & Launch 13‒16
+AI Release Assistant (OpenAI 
+G PT-4o); AI Cover Art G enerator 
+(DALL-E 3); Closed beta with 50‒
+100 artists; Bug ﬁxing and 
+perform ance optim isation; 
+Public launch
+KPI Target (End of M onth 3) Target (End of M onth 6)
+Registered U sers 1,000 5,000
+Releases Distributed 500 2,500
+Free-to-Paid Conversion Rate 3% 5%
+M onthly Recurring Revenue 
+(M RR) $500 $2,500
+Average Session Duration 5 m in 8 m in
+Royalty Payout Volum e $2,000 $15,000
+AI Feature U sage Rate 40% of active users 60% of active users
+U ser Churn Rate (M onthly) < 5% < 3%
+Risk Likelihood Im pact M itigation
+
+
+--- PAGE 15 ---
+
+References
+[1] Wise Guy Reports. (2024). M usic Distribution Service M arket Size, Trends & Growth 2035.
+[2] Industry Research Biz. (2026 ). M usic Distribution Services M arket Size and Growth 
+Report, 2035.
+[3] LALAL.AI. (2024 ). How M uch Streaming Services Pay Artists in 2024.
+[4] LinkedIn. (2026 ). Scaling Backend Development with NestJS and NextJS.
+[5] Recurly. (2025 ). What is Freemium? A Guide for Subscription Businesses.
+B2B aggregator delays 
+DSP delivery M edium High
+Contract SLA 
+guarantees; test with 
+10 releases before 
+public launch
+DSP API changes 
+break analytics M edium M edium
+Abstract DSP 
+integrations behind an 
+internal data layer; 
+m onitor API 
+changelogs
+OpenAI API costs 
+exceed budget Low M edium
+Im plem ent per-user 
+generation lim its on 
+all tiers; cache 
+com m on outputs
+Low user acquisition 
+post-launch M edium High
+Pre-build waitlist; 
+activate 
+aﬃliate/inﬂuencer 
+program m e on launch 
+day
+Royalty split disputes 
+between collaborators Low High
+Require explicit digital 
+acceptance of split 
+term s; m aintain 
+im m utable ledger
+Stripe Connect 
+com pliance issues Low High
+Engage Stripe's 
+onboarding team  
+early; ensure K YC/AM L 
+ﬂows are com pliant

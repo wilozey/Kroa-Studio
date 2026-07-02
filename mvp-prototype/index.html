@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KROA Studio MVP Console</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="KROA Studio navigation">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">K</div>
+          <div>
+            <p class="eyebrow">KROA Studio</p>
+            <h1>Artist OS</h1>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Sections">
+          <a href="#overview" class="nav-link active">Overview</a>
+          <a href="#release" class="nav-link">Release</a>
+          <a href="#finance" class="nav-link">Finance</a>
+          <a href="#assistant" class="nav-link">AI Assistant</a>
+          <a href="#waitlist" class="nav-link">Waitlist</a>
+        </nav>
+
+        <div class="sidebar-stat">
+          <span>Release readiness</span>
+          <strong id="readinessScore">42%</strong>
+          <div class="meter" aria-hidden="true"><span id="readinessMeter"></span></div>
+        </div>
+      </aside>
+
+      <main>
+        <section id="overview" class="topbar">
+          <div>
+            <p class="eyebrow">MVP slice</p>
+            <h2>Distribution, royalty clarity, and release-ready AI in one flow.</h2>
+          </div>
+          <button class="primary-action" id="jumpToRelease" type="button">New Release</button>
+        </section>
+
+        <section class="grid overview-grid" aria-label="Product overview">
+          <article class="panel hero-panel">
+            <div class="wave-art" aria-label="Stylized music release preview">
+              <div class="cover-preview">
+                <span id="coverInitials">KS</span>
+              </div>
+              <svg viewBox="0 0 520 160" role="img" aria-label="Audio waveform preview">
+                <path d="M0 84 C22 42 40 123 64 80 S105 28 130 82 S174 134 201 76 S244 42 272 84 S318 132 342 78 S386 24 416 82 S470 130 520 76" />
+                <path d="M0 104 C20 75 42 136 66 100 S104 55 132 102 S176 143 203 96 S244 70 273 104 S320 138 346 98 S391 62 420 100 S470 144 520 96" />
+              </svg>
+            </div>
+            <div class="hero-copy">
+              <p class="eyebrow">First value moment</p>
+              <h3 id="overviewTitle">Schedule a clean release in under 10 minutes.</h3>
+              <p id="overviewText">Fill the release form and KROA will flag metadata, timing, and split issues before they reach a distributor.</p>
+            </div>
+          </article>
+
+          <article class="panel metric-panel">
+            <span>Total streams</span>
+            <strong>84,260</strong>
+            <p>Daily imported reporting placeholder.</p>
+          </article>
+          <article class="panel metric-panel">
+            <span>Estimated royalties</span>
+            <strong>$421.72</strong>
+            <p>Clearly marked as estimates until statements arrive.</p>
+          </article>
+          <article class="panel metric-panel">
+            <span>Payout threshold</span>
+            <strong>$25</strong>
+            <p>Competitive lower threshold from the MVP spec.</p>
+          </article>
+        </section>
+
+        <section id="release" class="section-band">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">KROA Distribution</p>
+              <h2>Release Intake</h2>
+            </div>
+            <span class="status-pill" id="submissionStatus">Draft</span>
+          </div>
+
+          <div class="release-layout">
+            <form class="panel form-panel" id="releaseForm">
+              <div class="field-row">
+                <label>
+                  Artist name
+                  <input id="artistName" name="artistName" value="KROA Demo Artist" autocomplete="organization" />
+                </label>
+                <label>
+                  Primary genre
+                  <select id="genre" name="genre">
+                    <option>Afrobeats</option>
+                    <option>Alternative</option>
+                    <option>Electronic</option>
+                    <option>Hip-Hop</option>
+                    <option>Pop</option>
+                    <option>R&B</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  Release title
+                  <input id="releaseTitle" name="releaseTitle" value="Night Signal" />
+                </label>
+                <label>
+                  Type
+                  <select id="releaseType" name="releaseType">
+                    <option>Single</option>
+                    <option>EP</option>
+                    <option disabled>Album (Phase 2)</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  Release date
+                  <input id="releaseDate" name="releaseDate" type="date" />
+                </label>
+                <label>
+                  ISRC
+                  <input id="isrc" name="isrc" placeholder="Optional, e.g. USABC2600001" />
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  Audio file
+                  <input id="audioFile" name="audioFile" type="file" accept=".wav,.flac,.mp3,audio/wav,audio/flac,audio/mpeg" />
+                </label>
+                <label>
+                  Cover art
+                  <input id="coverArt" name="coverArt" type="file" accept="image/png,image/jpeg" />
+                </label>
+              </div>
+
+              <fieldset>
+                <legend>Explicit content</legend>
+                <div class="segmented">
+                  <label><input type="radio" name="explicit" value="no" checked /> Clean</label>
+                  <label><input type="radio" name="explicit" value="yes" /> Explicit</label>
+                  <label><input type="radio" name="explicit" value="unknown" /> Unsure</label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>DSPs</legend>
+                <div class="checkbox-grid" id="dspList">
+                  <label><input type="checkbox" value="Spotify" checked /> Spotify</label>
+                  <label><input type="checkbox" value="Apple Music" checked /> Apple Music</label>
+                  <label><input type="checkbox" value="Amazon Music" checked /> Amazon Music</label>
+                  <label><input type="checkbox" value="YouTube Music" checked /> YouTube Music</label>
+                  <label><input type="checkbox" value="TikTok" checked /> TikTok</label>
+                  <label><input type="checkbox" value="Instagram/Facebook" checked /> Instagram/Facebook</label>
+                  <label><input type="checkbox" value="Deezer" checked /> Deezer</label>
+                  <label><input type="checkbox" value="Tidal" checked /> Tidal</label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Territories</legend>
+                <div class="segmented">
+                  <label><input type="radio" name="territory" value="global" checked /> Global</label>
+                  <label><input type="radio" name="territory" value="selected" /> Selected territories</label>
+                </div>
+              </fieldset>
+            </form>
+
+            <aside class="panel validation-panel">
+              <div class="panel-heading">
+                <h3>Metadata Validator</h3>
+                <button class="secondary-action" id="validateRelease" type="button">Run Checks</button>
+              </div>
+              <ul id="validationList" class="validation-list" aria-live="polite"></ul>
+              <div class="payload-preview">
+                <p class="eyebrow">Distributor payload</p>
+                <pre id="payloadPreview"></pre>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="finance" class="section-band">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">KROA Analytics & Finance</p>
+              <h2>Splits and Payout Readiness</h2>
+            </div>
+            <button class="secondary-action" id="addSplit" type="button">Add Split</button>
+          </div>
+
+          <div class="finance-layout">
+            <div class="panel">
+              <div class="split-table" id="splitTable"></div>
+              <div class="split-total" id="splitTotal"></div>
+            </div>
+            <div class="panel payout-card">
+              <span>Confirmed balance</span>
+              <strong>$68.40</strong>
+              <p id="payoutMessage">Eligible for withdrawal. Connect Stripe or PayPal in the production build.</p>
+              <button class="primary-action" type="button">Withdraw Funds</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="assistant" class="section-band">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">KROA AI Starter</p>
+              <h2>Release Assistant</h2>
+            </div>
+            <button class="secondary-action" id="generateDrafts" type="button">Generate Drafts</button>
+          </div>
+
+          <div class="assistant-grid">
+            <label class="panel prompt-panel">
+              Track mood and story
+              <textarea id="releaseStory">A warm night-drive song about choosing your own lane after leaving a bad deal.</textarea>
+            </label>
+            <article class="panel output-panel">
+              <h3>Spotify Editorial Pitch</h3>
+              <p id="pitchOutput"></p>
+            </article>
+            <article class="panel output-panel">
+              <h3>Press Release</h3>
+              <p id="pressOutput"></p>
+            </article>
+            <article class="panel output-panel">
+              <h3>Social Captions</h3>
+              <p id="captionOutput"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="waitlist" class="section-band waitlist-band">
+          <div>
+            <p class="eyebrow">Pre-launch</p>
+            <h2>Collect early access demand while the product is built.</h2>
+          </div>
+          <form class="waitlist-form" id="waitlistForm">
+            <label>
+              Email
+              <input id="waitlistEmail" type="email" placeholder="artist@example.com" required />
+            </label>
+            <label>
+              Role
+              <select id="waitlistRole">
+                <option>Independent artist</option>
+                <option>Producer</option>
+                <option>Small label</option>
+                <option>Manager</option>
+              </select>
+            </label>
+            <button class="primary-action" type="submit">Join Waitlist</button>
+          </form>
+          <p id="waitlistMessage" class="form-message" aria-live="polite"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
